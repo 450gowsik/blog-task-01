@@ -1,0 +1,91 @@
+/* Base */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:#526375; color:#263452; }
+a { color: inherit; text-decoration: none; }
+
+/* Layout */
+.main { padding: 24px 16px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.page-title { font-size: 2rem; font-weight: 800; margin: 0 0 24px; text-align: center; color:#1f2937; }
+
+/* Search */
+.search-panel { text-align:center; margin-bottom: 2rem; }
+.search-panel input {
+  width:100%; max-width:420px; padding:.85rem 1.1rem; border-radius:1rem;
+  border:1.5px solid #d1d5db; outline:none; transition:all .3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.05);
+}
+.search-panel input:focus { border-color:#6366f1; box-shadow:0 0 0 3px rgba(99,102,241,.2); }
+
+/* Grid */
+.grid-container {
+  display:grid; grid-template-columns: repeat(4, minmax(0,1fr));
+  gap:2rem; justify-items:center;
+}
+@media (max-width: 1024px) { .grid-container { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px)  { .grid-container { grid-template-columns: 1fr; } }
+
+/* Card */
+.blog-card {
+  background:#fff; border-radius:1rem; overflow:hidden; width:100%; max-width:280px;
+  display:flex; flex-direction:column; box-shadow:0 6px 15px rgba(0,0,0,.06);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.blog-card:hover { transform: translateY(-6px); box-shadow:0 15px 30px rgba(0,0,0,.12); }
+.blog-card img { width:100%; height:14rem; object-fit:cover; transition: transform .35s ease; }
+.blog-card:hover img { transform: scale(1.05); }
+.blog-card h2 { font-size:1.1rem; font-weight:700; margin:1rem 1rem .5rem; color:#111827; }
+.blog-card p { font-size:.95rem; color:#4b5563; margin:0 1rem 1rem; line-height:1.6; flex-grow:1; }
+.blog-card button {
+  align-self:flex-start; margin: 0 1rem 1rem; padding:.5rem 1.1rem; background:#6366f1;
+  border:none; border-radius:.5rem; color:#fff; font-weight:600; cursor:pointer;
+}
+.blog-card button:hover { background:#4f46e5; }
+
+/* Detail */
+.blog-detail {
+  background:#fff; padding:2rem; border-radius:1.25rem; box-shadow:0 10px 30px rgba(0,0,0,.08);
+  max-width:52rem; margin: 0 auto;
+}
+.blog-detail h2 { font-size:1.8rem; font-weight:800; margin:.5rem 0 1rem; }
+.blog-detail img { width:100%; height:16rem; object-fit:cover; border-radius:1rem; margin:1rem 0; }
+.blog-detail p { font-size:1.05rem; line-height:1.8; color:#374151; }
+.back-btn {
+  display:inline-block; background:#ef4444; color:#fff; font-weight:700; padding:.5rem 1.1rem;
+  border-radius:.5rem; margin-bottom:1rem;
+}
+.back-btn:hover { background:#dc2626; }
+
+/* Login */
+.login-wrap { display:grid; place-items:center; min-height: calc(100vh - 48px); }
+.login-card {
+  width:100%; max-width:420px; background:#fff; border-radius:1rem; padding:2rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.login-title { margin:0 0 .25rem; font-size:1.75rem; font-weight:800; color:#111827; text-align:center; }
+.login-subtitle { margin:0 0 1.25rem; text-align:center; color:#6b7280; }
+.login-error { background:#fee2e2; color:#991b1b; padding:.75rem 1rem; border-radius:.75rem; margin-bottom:1rem; font-weight:600; }
+.login-label { display:block; font-weight:700; font-size:.95rem; margin:.5rem 0 .35rem; color:#374151; }
+.login-input {
+  width:100%; padding:.85rem 1rem; border-radius:.85rem; border:1.5px solid #d1d5db;
+  outline:none; transition:border .2s ease, box-shadow .2s ease;
+}
+.login-input:focus { border-color:#6366f1; box-shadow:0 0 0 3px rgba(99,102,241,.2); }
+.login-btn {
+  width:100%; margin-top:1rem; padding:.9rem 1rem; border:none; border-radius:.85rem;
+  background:#6366f1; color:#fff; font-weight:800; cursor:pointer;
+}
+.login-btn:hover { background:#4f46e5; 
+}
+/* Footer */
+.footer { text-align:center; padding:1rem 0; color:#6b7280; font-size:.9rem; margin-top:2rem; }
+/* Scrollbar */
+::-webkit-scrollbar { width:8px; }
+::-webkit-scrollbar-track { background:#f3f4f6; border-radius:4px; }
+::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:4px; }
+::-webkit-scrollbar-thumb:hover { background:#9ca3af; }
+/* Utility */
+.hidden { display:none !important; }  
+/* End of file */
+
